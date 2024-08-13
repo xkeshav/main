@@ -1,32 +1,11 @@
-# Template Repository
+# Waqt  
 
-This is [readme file][readme] of template repository; based on typescript and node.
+> _Waqt_ Means Time in Hindi ( actually urdu )
 
-## Pre-requisite
+This is just displaying time in hindi month along with english
 
-- Node 18+
-- Typescript v 5.0+
-- A Browser
-- an IDE ( VS Code Preferred)
+and background color change every second
 
-## How to start
+## Screenshot  
 
-- Navigate to the repo from terminal
-- Install dependencies using below command
-
-```bash
-> npm install
-```
-
-then
-
-```sh
-> npm run start
-```
-
-## Note
-
-Please update the readme as per your project.
-
-<!--  -->
-[readme]: https://github.com/xkeshav/project/blob/main/README.md
+![waqt](Waqt.png)
