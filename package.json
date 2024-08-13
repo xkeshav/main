@@ -1,19 +1,19 @@
 {
-  "name": "@xkeshav/project",
+  "name": "@xkeshav/watch",
   "version": "0.0.1",
   "private": false,
-  "displayName": "ProjectX",
-  "description": "This is a <project> repository.",
+  "displayName": "watchX",
+  "description": "This is a watch repository.",
   "publisher": "@xkeshav",
-  "homepage": "https://github.com/xkeshav/project/blob/main/README.md",
+  "homepage": "https://github.com/xkeshav/watch/blob/main/README.md",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xkeshav/project/issues",
+    "url": "https://github.com/xkeshav/watch/issues",
     "email": "xkeshav@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xkeshav/project.git"
+    "url": "https://github.com/xkeshav/watch.git"
   },
   "keywords": [
     "project",
@@ -25,9 +25,8 @@
     "email": "xkeshav@gmail.com"
   },
   "contributors": [],
-  "main": "src/index.js",
+  "main": "index.html",
   "scripts": {
-    "start": "tsc"
   },
   "dependencies": { 
     "@xkeshav/day": "latest",

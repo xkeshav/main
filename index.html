@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waqt</title>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    h1 {
+      color: white;
+      background-color: black;
+      text-align: center;
+      padding: 0.5rem;
+    }
+    time {
+      background: green;
+      height: 100vh;
+      display: grid;
+      text-align: center;
+      place-content: center;
+      font-size: clamp(10vw, 4rem, 10vw);
+      color: whitesmoke;
+      padding: 1rem;
+    }
+  </style>
+  <script type="text/javascript" async>
+    const options = {
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hour12: false,
+      timeZone: "America/Los_Angeles",
+    };
+
+    const fullEnglish = {
+      weekday: 'long',
+      dayPeriod: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: 'numeric',
+      calendar: 'iso8601',
+      timeZone: 'Asia/Kolkata',
+      timeZoneName: 'short',
+      formatMatcher: 'basic',
+      hourCycle: 'h12',
+    };
+
+    const fullHindi = {
+      weekday: 'long',
+      dayPeriod: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: 'numeric',
+      calendar: 'indian',
+      timeZone: 'Asia/Kolkata',
+      numberingSystem: 'deva',
+      timeZoneName: 'shortGeneric',
+      formatMatcher: 'basic',
+      hourCycle: 'h12',
+    };
+
+    const styleOption = {
+      dateStyle: 'long',
+      timeStyle: 'long',
+      calendar:  'iso8601', // 'indian',
+      numberingSystem: 'deva',
+      timeZone: 'Asia/Kolkata',
+      hour12: false,
+      useGrouping: true,
+      minimumIntegerDigits: 1
+    };
+
+    const fullDate = new Intl.DateTimeFormat("en-us", styleOption);
+    const samay = new Intl.DateTimeFormat("hi", fullHindi);
+
+  </script>
+</head>
+
+<body>
+  <h1>Today date is 🗓 </h1>
+  <time data-id="today">
+    <p data-id="hindi"></p>
+    <p data-id="english"></p>
+  </time>
+  <script>
+    const hindi = document.querySelector('[data-id="hindi"]');
+    const english = document.querySelector('[data-id="english"]');
+    const renderClock = () => {
+      const today = new Date();
+      const hi = samay.format(today);
+      const eng =  fullDate.format(today);
+      hindi.innerHTML = hi;
+      english.innerHTML = eng;
+    };
+    setInterval(renderClock, 1000);
+  </script>
+</body>
