@@ -90,6 +90,7 @@
 
     const fullDate = new Intl.DateTimeFormat("en-us", fullEnglish);
     const samay = new Intl.DateTimeFormat("hi", fullHindi);
+    
 
   </script>
 </head>
@@ -97,18 +98,27 @@
 <body>
   <h1>Today date is 🗓 </h1>
   <time data-id="today" style="--h:0;--m:0;--s:0">
+    <p data-id="hindu"></p>
     <p data-id="hindi"></p>
     <p data-id="english"></p>
   </time>
   <script>
+    const hindu = document.querySelector('[data-id="hindu"]');
     const hindi = document.querySelector('[data-id="hindi"]');
     const english = document.querySelector('[data-id="english"]');
     const timeElem = document.querySelector('time');
+    const dateInHindi = new Intl.DateTimeFormat('hi', {
+    dateStyle: 'full',
+    timeStyle: 'long',
+    });
+
     const renderClock = () => {
       const today = new Date();
       const hi = samay.format(today);
       const eng =  fullDate.format(today);
-      hindi.innerHTML = hi;
+      const hindi_date = dateInHindi.format(today);
+      hindi.innerHTML = hindi_date;
+      hindu.innerHTML = hi;
       english.innerHTML = eng;
       const h = today.getHours();
       const m = today.getMinutes();
