@@ -15,6 +15,7 @@
     body {
       box-sizing: border-box;
     }
+
     h1 {
       color: white;
       background-color: black;
@@ -23,13 +24,17 @@
     }
     time {
       background: hsl(var(--h, 0) var(--m, 0) val(--s, 0));
-      height: 100vh;
+      line-height: 10lvh;
       display: grid;
       text-align: center;
       place-content: center;
       font-size: clamp(2ch, 30vw, 8ch);
-      color: color-contrast(var(--bg-color) vs #FFF, #000);
+      color: white;
       padding: 1rem;
+    }
+    p {
+      border-block: 2px solid white;
+      padding-block: 8px;
     }
   </style>
   <script type="text/javascript" async>
@@ -72,24 +77,25 @@
       calendar: 'indian',
       timeZone: 'Asia/Kolkata',
       numberingSystem: 'deva',
-      timeZoneName: 'shortGeneric',
+      /* timeZoneName: 'shortGeneric', */
       formatMatcher: 'basic',
       hourCycle: 'h12',
     };
 
     const styleOption = {
-      dateStyle: 'long',
+      dateStyle: 'full',
       timeStyle: 'long',
       calendar:  'iso8601', // 'indian',
-      numberingSystem: 'deva',
+      /* numberingSystem: 'deva', */
       timeZone: 'Asia/Kolkata',
       hour12: false,
       useGrouping: true,
       minimumIntegerDigits: 1
     };
 
-    const fullDate = new Intl.DateTimeFormat("en-us", fullEnglish);
+    const dateInEnglish = new Intl.DateTimeFormat("en-us", fullEnglish);
     const samay = new Intl.DateTimeFormat("hi", fullHindi);
+    const dateInHindi = new Intl.DateTimeFormat('hi',styleOption);
     
 
   </script>
@@ -107,15 +113,11 @@
     const hindi = document.querySelector('[data-id="hindi"]');
     const english = document.querySelector('[data-id="english"]');
     const timeElem = document.querySelector('time');
-    const dateInHindi = new Intl.DateTimeFormat('hi', {
-    dateStyle: 'full',
-    timeStyle: 'long',
-    });
 
     const renderClock = () => {
       const today = new Date();
+      const eng =  dateInEnglish.format(today);
       const hi = samay.format(today);
-      const eng =  fullDate.format(today);
       const hindi_date = dateInHindi.format(today);
       hindi.innerHTML = hindi_date;
       hindu.innerHTML = hi;
@@ -128,6 +130,7 @@
       timeElem.style.setProperty("--s", s*10); */
       timeElem.style.backgroundColor  = `hsl(${h} ${m} ${s})`;
     };
+    /* renderClock(); */
     setInterval(renderClock, 1000);
   </script>
 </body>
