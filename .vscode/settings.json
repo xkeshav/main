@@ -1,7 +1,4 @@
 {
-  "emmet.includeLanguages": {
-    "astro": "html"
-  },
   "git.autofetch": true,
   "git.confirmSync": false,
   "workbench.startupEditor": "none",
@@ -33,76 +30,11 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.preferredLightColorTheme": "GitHub Dark Default",
-  "githubPullRequests.createOnPublishBranch": "never",
-  "github.gitProtocol": "ssh",
-  "git.openAfterClone": "alwaysNewWindow",
-  "git.defaultCloneDirectory": "/home/recursive/dev",
   "editor.linkedEditing": true,
-  "githubPullRequests.pullBranch": "never",
-  "window.title": "${rootNameShort}${separator}${activeEditorShort}${separator}${activeFolderMedium}",
-  "projectManager.git.baseFolders": [
-    "/home/recursive/dev"
-  ],
-  "workbench.editor.pinnedTabSizing": "compact",
-  "workbench.editor.pinnedTabsOnSeparateRow": true,
-  "cSpell.userWords": [
-    "testid"
-  ],
-  "workbench.iconTheme": "catppuccin-perfect-latte",
   "editor.tabSize": 2,
   "git.enableSmartCommit": true,
   "files.watcherExclude": {
     "**/node_modules/*/**": true
   },
-  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
-  "peacock.favoriteColors": [
-    {
-      "name": "Angular Red",
-      "value": "#dd0531"
-    },
-    {
-      "name": "Azure Blue",
-      "value": "#007fff"
-    },
-    {
-      "name": "JavaScript Yellow",
-      "value": "#f9e64f"
-    },
-    {
-      "name": "Blue",
-      "value": "#1857a4"
-    },
-    {
-      "name": "Node Green",
-      "value": "#215732"
-    },
-    {
-      "name": "Purple",
-      "value": "#741258"
-    },
-    {
-      "name": "Something Different",
-      "value": "#6A3B98"
-    },
-    {
-      "name": "pinky",
-      "value": "#d74692de"
-    },
-    {
-      "name": "vibrant",
-      "value": "#098756"
-    },
-    {
-      "name": "Vue Green",
-      "value": "#42b883"
-    }
-  ],
-  "zenMode.centerLayout": false,
-  "zenMode.hideLineNumbers": false,
-  "debug.javascript.codelens.npmScripts": "never",
-  "workbench.layoutControl.enabled": false,
-  "window.autoDetectColorScheme": true,
-  "explorer.compactFolders": false,
   "files.autoSave": "afterDelay"
 }
